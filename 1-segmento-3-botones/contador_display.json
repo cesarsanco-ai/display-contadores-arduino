@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "author": "Test",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-7segment", "id": "display1", "top": -200, "left": 100, "attrs": { "common": "cathode" } },
+    { "type": "wokwi-pushbutton", "id": "btn1", "top": 50, "left": -150, "attrs": { "color": "green" } },
+    { "type": "wokwi-pushbutton", "id": "btn2", "top": 120, "left": -150, "attrs": { "color": "blue" } },
+    { "type": "wokwi-pushbutton", "id": "btn3", "top": 190, "left": -150, "attrs": { "color": "red" } }
+  ],
+  "connections": [
+    [ "uno:2", "display1:A", "green", [] ],
+    [ "uno:3", "display1:B", "green", [] ],
+    [ "uno:4", "display1:C", "green", [] ],
+    [ "uno:5", "display1:D", "green", [] ],
+    [ "uno:6", "display1:E", "green", [] ],
+    [ "uno:7", "display1:F", "green", [] ],
+    [ "uno:8", "display1:G", "green", [] ],
+    [ "display1:COM.1", "uno:GND.1", "black", [] ],
+    [ "btn1:1.l", "uno:11", "red", [] ],
+    [ "btn1:2.l", "uno:GND.2", "black", [] ],
+    [ "btn2:1.l", "uno:12", "red", [] ],
+    [ "btn2:2.l", "uno:GND.2", "black", [] ],
+    [ "btn3:1.l", "uno:13", "red", [] ],
+    [ "btn3:2.l", "uno:GND.2", "black", [] ]
+  ],
+  "dependencies": {}
+}
